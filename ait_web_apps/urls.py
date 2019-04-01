@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-
+from __future__ import unicode_literals
 from django.urls import path, re_path
 from forms_builder.forms.views import form_sent, form_detail
 from fobi import urls
@@ -24,7 +24,7 @@ admin.autodiscover()
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    re_path(r"(?P<slug>.*)/sent/$", form_sent, name="form_sent"),
-    re_path(r"(?P<slug>.*)/$", form_detail, name="form_detail"),
+    re_path(r"forms/(?P<slug>.*)/sent/$", form_sent, name="form_sent"),
+    re_path(r"forms/(?P<slug>.*)/$", form_detail, name="form_detail"),
 
 ]

@@ -21,6 +21,6 @@ simplejson==3.16.0
 six==1.12.0
 sphinx-me==0.3
 Unidecode==1.0.23
-urllib3==1.24.1
+urllib3==1.26.5
 vishap==0.1.5
 webencodings==0.5.1
